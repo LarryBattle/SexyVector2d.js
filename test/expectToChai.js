@@ -6,6 +6,9 @@ assert.deepEqual = function (a, b, msg) {
 assert.equal = function (a, b, msg) {
 	expect(a).to.be.equal(b);
 };
+assert.ok = function (a, msg) {
+	expect(a).to.be.equal(true);
+};
 assert.throws = function (fn, msg) {
 	expect(fn).to.throwError();
 };
