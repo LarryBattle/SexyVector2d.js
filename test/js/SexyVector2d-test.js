@@ -20,6 +20,22 @@ describe("SexyVectory2d", function(){
 			assert.deepEqual(x.toArray(), [0,0]);
 		});
 	});
+	describe("a clone", function(){
+		it("should be a new copy.", function(){
+			var x = Vector2D.parse(0,0);
+			var y = x.clone();
+			
+			assert.ok( y !== x );
+			assert.ok( x.equals(y) );
+		});
+	});
+	describe("coordinates", function(){
+		var x = Vector2D.parse(2,3);
+		it("should have a x and y.", function(){
+			assert.equal( x.getX(), 2 );
+			assert.equal( x.getY(), 3 );
+		});
+	});
 });
 
 
